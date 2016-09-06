@@ -69,9 +69,12 @@ String key;
 List<String> data = null;
 for(String strWord : wordList) {
 //count str
+
+
 long count = 0L;
 for(int i = 0; i < strWord.length(); i++) {
 count += strWord.charAt(i);
+
 }
 
 key =String.valueOf(count);
@@ -82,10 +85,12 @@ data.add(strWord);
 result.put(key, data);
 } else {
 data = new ArrayList<String>();
+strWord.trim();
 data.add(strWord);
 
 
 result.put(key, data);
+
 
 }
 }
